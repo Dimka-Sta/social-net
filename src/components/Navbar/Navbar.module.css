@@ -3,12 +3,11 @@
     background-color: aqua;
   }
 
-  .item {
+  .item a {
     color: aliceblue;
     cursor: pointer;
   }
 
-  .item.active {
-    cursor: pointer;
-    color: black;
+  .item a.activeLink {
+    color: rgb(62, 45, 186);
   }
