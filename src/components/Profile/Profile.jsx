@@ -1,18 +1,13 @@
 import React from "react";
 import classes from './Profile.module.css';
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo"
 
 const Profile = () => {
   return (
     <div>
-      <div>
-        <img alt='logo' src='https://assets.kpmg.com/is/image/kpmg/future-car-1600-1:cq5dam.web.1082.378' />
-      </div>
-
-      <div>
-        ava
-      </div>
-
+      
+    <ProfileInfo />
     <MyPosts />
 
     </div>
