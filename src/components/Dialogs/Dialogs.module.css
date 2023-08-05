@@ -9,11 +9,11 @@
 }
 
 .dialogsItems .active {
-    color: blue;
+    color: rgb(51, 255, 0);
 }
 
 .messages {
-
+    padding: 10px;
 }
 
 .message {
