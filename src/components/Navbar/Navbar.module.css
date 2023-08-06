@@ -4,10 +4,12 @@
   }
 
   .item a {
-    color: aliceblue;
+    color: rgb(25, 29, 247);
     cursor: pointer;
+    text-decoration: none;
+
   }
 
   .item a.activeLink {
-    color: blue
+    color: rgb(2, 2, 143)
   }
