@@ -9,7 +9,14 @@ const ProfileInfo = () => {
       </div>
 
       <div className={classes.discriptionBlock}>
-        ava
+        <img alt='ava' src='https://sobakovod.club/uploads/posts/2022-01/1641089504_1-sobakovod-club-p-sobaki-nemets-ovcharka-1.jpg' />
+      </div>
+
+      <div>
+        <div>My name </div>
+        <div> My age</div>
+        <div>My job</div>
+        <div>Status</div>
       </div>
 
     </div>

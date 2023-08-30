@@ -8,6 +8,7 @@ let state = {
             { id: 1, massage: 'Haw are you?', likesCount: "likes 10" },
             { id: 2, massage: 'My first post!', likesCount: "Likes 20" },
         ],
+        newPostText: 'kamasutra.com'
         
     },
 
@@ -31,14 +32,20 @@ let state = {
     },
 }
 
-export let addPost = (postMassage) => {
+export let addPost = () => {
     let newPost = {
         id: 3,
-        massage: postMassage,
+        massage: state.profilePage.newPostText,
         likesCount: 'Likes 0',
     };
 
     state.profilePage.postsData.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntiretree(state);
+}
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
     rerenderEntiretree(state);
 }
 
