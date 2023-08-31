@@ -7,7 +7,7 @@ const MyPosts = (props) => {
 
 
     let postsElements =
-        props.postsData.map(messages => <Post message={messages.massage} likesCount={messages.likesCount} />)
+        props.postsData.map(messages => <Post message={messages.message} likesCount={messages.likesCount} />)
 
     let newPostElement = React.createRef();
 
@@ -17,7 +17,7 @@ const MyPosts = (props) => {
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.updateNewPostText(text)
+        props.updateNewPostText(text);
     };
 
 
@@ -33,7 +33,7 @@ const MyPosts = (props) => {
                         value={props.newPostText} />
                 </div>
                 <div>
-                    <button onClick={addPost}> Add</button>
+                    <button onClick={addPost}> Add post </button>
                 </div>
 
             </div>
@@ -45,6 +45,6 @@ const MyPosts = (props) => {
 
         </div>
     )
-}
+};
 
 export default MyPosts;

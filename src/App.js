@@ -30,7 +30,10 @@ function App(props) {
                 updateNewPostText={props.updateNewPostText} />} />
 
             <Route path='/dialogs/*'
-              element={<Dialogs state={props.state.dialogsPage} />} />
+              element={<Dialogs
+                dialogsPage={props.state.dialogsPage}
+                addMessage={props.addMessage}
+                updateNewMessageText={props.updateNewMessageText} />} />
 
             <Route path='/news/*' element={<News />} />
             <Route path='/musik/*' element={<Musik />} />
