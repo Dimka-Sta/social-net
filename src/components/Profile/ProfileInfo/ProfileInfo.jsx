@@ -4,12 +4,12 @@ import classes from './ProfileInfo.module.css';
 const ProfileInfo = () => {
   return (
     <div>
-      <div>
+      <div className={classes.backgroundBlock}>
         <img alt='logo' src='https://assets.kpmg.com/is/image/kpmg/future-car-1600-1:cq5dam.web.1082.378' />
       </div>
 
       <div className={classes.discriptionBlock}>
-        <img alt='ava' src='https://sobakovod.club/uploads/posts/2022-01/1641089504_1-sobakovod-club-p-sobaki-nemets-ovcharka-1.jpg' />
+        <img alt='ava' src='https://auto.yuga.ru/media/a3/ae/01_gaz_7__2979n7u.jpg' />
       </div>
 
       <div>

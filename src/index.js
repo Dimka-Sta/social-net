@@ -1,10 +1,10 @@
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import state, { subscribe } from './redux/state';
+import store from './redux/state';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { addPost, updateNewPostText, addMessage, updateNewMessageText } from './redux/state';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -13,17 +13,17 @@ let rerenderEntiretree = (state) => {
     <React.StrictMode>
       <App
         state={state}
-        addPost={addPost}
-        updateNewPostText={updateNewPostText}
-        addMessage={addMessage}
-        updateNewMessageText={updateNewMessageText} />
+        addPost={store.addPost.bind(store)}
+        updateNewPostText={store.updateNewPostText.bind(store)}
+        addMessage={store.addMessage.bind(store)}
+        updateNewMessageText={store.updateNewMessageText.bind(store)} />
     </React.StrictMode>
   );
 }
 
 
-rerenderEntiretree(state);
+rerenderEntiretree(store.getState());
 
-subscribe(rerenderEntiretree);
+store.subscribe(rerenderEntiretree);
 
 reportWebVitals();
