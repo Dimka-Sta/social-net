@@ -5,4 +5,16 @@
   
   .header img {
     width: 50px;
+ 
+  }
+
+  .headerBlock {
+    cursor: pointer;
+    display: flex;
+    float: right;
+  }
+
+  .headerButton {
+    margin-right: 10px;
+    margin-top: 10px;
   }
