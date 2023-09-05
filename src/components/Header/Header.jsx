@@ -11,6 +11,8 @@ function Header() {
 
                 <div className={classes.headerBlock}>
                     <div className={classes.headerButton}> LogIn </div> 
+                    <div className={classes.headerButton}> About </div> 
+                    <div className={classes.headerButton}> Eng </div> 
                 </div>
 
             </div>
