@@ -9,7 +9,7 @@ let mapStateToProps = (state) => {
         postsData: state.profilePage.postsData,
         newPostText: state.profilePage.newPostText
     }
-}
+};
 
 let mapDispatchToProps = (dispatch) => {
     return {
@@ -21,7 +21,7 @@ let mapDispatchToProps = (dispatch) => {
             dispatch(action)
         }
     }
-}
+};
 
 const MyPostsContainer = connect(mapStateToProps, mapDispatchToProps)(MyPosts)
 
