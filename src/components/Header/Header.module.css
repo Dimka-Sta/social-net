@@ -1,21 +1,32 @@
 .header {
-    grid-area: h;
-    background-color: tomato;
-  }
-  
-  .header img {
-    width: 50px;
- 
-  }
+  grid-area: h;
+  background-color: tomato;
+}
 
-  .headerBlock {
-    cursor: pointer;
-    display: flex;
-    float: right;
-  }
+.header img {
+  width: 50px;
 
-  .headerButton {
-    color: aliceblue;
-    margin-right: 10px;
-    margin-top: 10px;
-  }
+}
+
+.headerBlock {
+  cursor: pointer;
+  display: flex;
+  float: right;
+}
+
+.headerButton {
+  color: aliceblue;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.headerBlock img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.headerButtonPush {
+  border: 0;
+  background: transparent;
+}

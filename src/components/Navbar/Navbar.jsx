@@ -22,7 +22,11 @@ const Navbar = () => {
       </div>
 
       <div className={classes.item}>
-        <NavLink to='settings'>Settings</NavLink>
+        <NavLink to="/users">Users</NavLink>
+      </div>
+
+      <div className={classes.item}>
+        <NavLink to='/settings'>Settings</NavLink>
       </div>
     </nav>
   )
