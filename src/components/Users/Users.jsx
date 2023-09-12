@@ -1,33 +1,15 @@
-import styles from './Users.module.css'
+import styles from './Users.module.css';
+import axios from 'axios';
+import userPhoto from '../../assets/images/images.png';
 
 let Users = (props) => {
 
     if (props.users.length === 0) {
-        props.setUsers([
-            {
-                id: 1, photoUrl: 'https://ukrainianingermany.de/wp-content/uploads/2022/10/pexels-sarmad-mughal-305070.jpg',
-                followed: true,
-                fullName: 'Dmitry S.',
-                status: 'I search new job!',
-                location: { city: 'Heilbronn', country: 'Germany' }
-            },
+        axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+            props.setUsers(response.data.items)
+        });
 
-            {
-                id: 2, photoUrl: 'https://lifeboss.ru/wp-content/uploads/2020/07/deshevaya-ili-dorogaya-mashina-kakuyu-vybrat.jpg',
-                followed: false,
-                fullName: 'Mikhail T.',
-                status: 'Im in Thailand now!',
-                location: { city: 'New York', country: 'USA' }
-            },
-
-            {
-                id: 3, photoUrl: 'https://luxury-trans.com.ua/img/about_us-min.jpg',
-                followed: false,
-                fullName: 'Daniil I.',
-                status: 'Write new article',
-                location: { city: 'London', country: 'United Kingdom' }
-            },
-        ])
+        
     }
 
     return (
@@ -38,7 +20,7 @@ let Users = (props) => {
                     <span>
 
                         <div>
-                            <img src={u.photoUrl} className={styles.userPhoto} />
+                            <img src={u.photos.small != null ? u.photos.small :  userPhoto } className={styles.userPhoto} />
                         </div>
                         <div>
                             {
@@ -55,7 +37,7 @@ let Users = (props) => {
 
                         <span>
                             <div>
-                                {u.fullName}
+                                {u.name}
                             </div>
                             <div>
                                 {u.status}
@@ -64,10 +46,10 @@ let Users = (props) => {
 
                         <span>
                             <div>
-                                {u.location.country}
+                                {'u.location.country'}
                             </div>
                             <div>
-                                {u.location.city}
+                                {'u.location.city'}
                             </div>
                         </span>
 
